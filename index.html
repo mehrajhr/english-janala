@@ -4,8 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>English Janala</title>
+    <!-- daisy ui cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- font awesome  -->
+    <script src="https://kit.fontawesome.com/20ed8860d8.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+    <header class="py-5 border-b-2 border-[#C6BDBD] bg-slate-50">
+        <nav class="w-11/12 mx-auto flex justify-between items-center">
+            <div class="flex gap-2 items-center">
+                <h2 class="text-3xl font-bold">English</h2>
+                <img class="w-16" src="assets/logo.png" alt="">
+                <h2 class="text-3xl">জানালা</h2>
+            </div>
+
+            <div class="flex gap-3">
+                <button class="btn btn-dash btn-primary font-semibold text-xl"><i class="fa-solid fa-circle-question"></i>FAQ</button>
+                <button class="btn btn-dash btn-primary font-semibold text-xl"><i class="fa-solid fa-book-open"></i>Learn</button>
+                <button class="btn btn-dash btn-primary font-semibold text-xl"><i class="fa-solid fa-right-from-bracket"></i>Logout</button>
+            </div>
+        </nav>
+    </header>
 </body>
 </html>

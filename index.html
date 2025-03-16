@@ -57,14 +57,15 @@
         <!-- Let's Learn Vocabularies section -->
 
         <section class="w-11/12 mx-auto py-20">
-            <h2 class="text-4xl py-5 text-center font-bold"><span class="text-blue-500">Let's </span>Learn Vocabularies</h2>
+            <h2 class="text-4xl py-5 text-center font-bold"><span class="text-blue-500">Let's </span>Learn Vocabularies
+            </h2>
             <div id="lesson-btn-container" class="flex gap-5 justify-center py-5">
                 <!-- <button onclick="loadVocabulary()" class="btn btn-outline btn-primary"><i class="fa-solid fa-book-open"></i> Primary</button> -->
             </div>
         </section>
 
         <!-- Vocabulary Section -->
-         <section class="w-11/12 mx-auto bg-[#F8F8F8] py-10 px-5 rounded-xl">
+        <section class="w-11/12 mx-auto bg-[#F8F8F8] py-10 px-5 rounded-xl">
 
             <!-- initial -->
             <div id="initial" class="flex flex-col gap-4 justify-center items-center">
@@ -80,16 +81,18 @@
             <!-- Vocabulary loaded card container -->
             <div id="displayVocabularyCardContainer" class="grid grid-cols-3 gap-5">
             </div>
-         </section>
+        </section>
         <!-- frequently ask question section -->
         <section class="w-11/12 mx-auto py-20">
-            <h2 class="text-4xl font-bold text-center mb-16"><span class="text-blue-400">Frequently</span> Asked Questions
+            <h2 class="text-4xl font-bold text-center mb-16"><span class="text-blue-400">Frequently</span> Asked
+                Questions
             </h2>
             <div class="flex flex-col gap-5">
                 <div class="collapse collapse-plus bg-base-100 border border-base-300">
                     <input type="radio" name="my-accordion-3" checked="checked" />
                     <div class="collapse-title font-semibold">1. How can I start learning English on this website?</div>
-                    <div class="collapse-content text-sm">Think about how you learn best and choose resources that cater to your preferred learning style. </div>
+                    <div class="collapse-content text-sm">Think about how you learn best and choose resources that cater
+                        to your preferred learning style. </div>
                 </div>
                 <div class="collapse collapse-plus bg-base-100 border border-base-300">
                     <input type="radio" name="my-accordion-3" />
@@ -104,12 +107,15 @@
                 <div class="collapse collapse-plus bg-base-100 border border-base-300">
                     <input type="radio" name="my-accordion-3" />
                     <div class="collapse-title font-semibold">4. How can I build my English vocabulary?</div>
-                    <div class="collapse-content text-sm">To build your English vocabulary, engage in regular reading, learn new words in context, use flashcards or a vocabulary journal, and practice using those words in speaking and writing. </div>
+                    <div class="collapse-content text-sm">To build your English vocabulary, engage in regular reading,
+                        learn new words in context, use flashcards or a vocabulary journal, and practice using those
+                        words in speaking and writing. </div>
                 </div>
                 <div class="collapse collapse-plus bg-base-100 border border-base-300">
                     <input type="radio" name="my-accordion-3" />
                     <div class="collapse-title font-semibold">5. Do you offer certificates for completed courses?</div>
-                    <div class="collapse-content text-sm">Yes, certificates are issued to those who complete the course.</div>
+                    <div class="collapse-content text-sm">Yes, certificates are issued to those who complete the course.
+                    </div>
                 </div>
             </div>
         </section>
@@ -136,6 +142,33 @@
         </div>
     </footer>
 
+    <!-- Open the modal using ID.showModal() method -->
+    <!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
+    <dialog id="vocabularyDetails" class="modal">
+        <div class="modal-box">
+            <h3 class="text-2xl font-bold">Eager ( <i class="fa-solid fa-microphone"></i> : ইগার)</h3>
+            <div class="py-5 flex flex-col gap-2">
+                <p >Meaning</p>
+                <p >আগ্রহী</p>
+            </div>
+            <div class="py-5 flex flex-col gap-2">
+                <p >Example</p>
+                <p >The kids were eager to open their gifts.</p>
+            </div>
+            <div class="py-5 flex flex-col gap-2">
+                <p >সমার্থক শব্দ গুলো</p>
+                <div id="synonymContainer" class="flex flex-row gap-2">
+
+                </div>
+            </div>
+            <div class="modal-action justify-start">
+                <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn btn-active btn-primary">Complete Learning</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
     <script src="script/index.js"></script>
 </body>
 

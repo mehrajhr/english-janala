@@ -56,10 +56,31 @@
 
         <!-- Let's Learn Vocabularies section -->
 
-        <section>
+        <section class="w-11/12 mx-auto py-20">
             <h2 class="text-4xl py-5 text-center font-bold"><span class="text-blue-500">Let's </span>Learn Vocabularies</h2>
-            <div class="flex gap-5"></div>
+            <div id="lesson-btn-container" class="flex gap-5 justify-center py-5">
+                <!-- <button onclick="loadVocabulary()" class="btn btn-outline btn-primary"><i class="fa-solid fa-book-open"></i> Primary</button> -->
+            </div>
         </section>
+
+        <!-- Vocabulary Section -->
+         <section class="w-11/12 mx-auto bg-[#F8F8F8] py-10 px-5 rounded-xl">
+
+            <!-- initial -->
+            <div id="initial" class="flex flex-col gap-4 justify-center items-center">
+                <p class="text-sm text-gray-600">আপনি এখনো কোন Lesson Select করেন নি</p>
+                <h2 class="text-2xl font-semibold">একটি Lesson Select করুন।</h2>
+            </div>
+
+            <div id="noVocabularyAlert" class="flex flex-col gap-4 justify-center items-center">
+                <i class="fa-solid fa-triangle-exclamation text-8xl text-gray-500"></i>
+                <p class="text-sm text-gray-600">এই Lesson এ এখনো কোন Vocabulary যুক্ত করা হয়নি।</p>
+                <h2 class="text-2xl font-semibold">নেক্সট Lesson এ যান</h2>
+            </div>
+            <!-- Vocabulary loaded card container -->
+            <div id="displayVocabularyCardContainer" class="grid grid-cols-3 gap-5">
+            </div>
+         </section>
         <!-- frequently ask question section -->
         <section class="w-11/12 mx-auto py-20">
             <h2 class="text-4xl font-bold text-center mb-16"><span class="text-blue-400">Frequently</span> Asked Questions
@@ -114,6 +135,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="script/index.js"></script>
 </body>
 
 </html>

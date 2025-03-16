@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
     <!-- font awesome  -->
     <script src="https://kit.fontawesome.com/20ed8860d8.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header class="py-5 border-b-2 border-[#C6BDBD] bg-slate-50">
         <nav class="w-11/12 mx-auto flex justify-between items-center">
@@ -21,11 +23,70 @@
             </div>
 
             <div class="flex gap-3">
-                <button class="btn btn-dash btn-primary font-semibold text-xl"><i class="fa-solid fa-circle-question"></i>FAQ</button>
-                <button class="btn btn-dash btn-primary font-semibold text-xl"><i class="fa-solid fa-book-open"></i>Learn</button>
-                <button class="btn btn-dash btn-primary font-semibold text-xl"><i class="fa-solid fa-right-from-bracket"></i>Logout</button>
+                <button class="btn btn-dash btn-primary font-semibold text-xl"><i
+                        class="fa-solid fa-circle-question"></i>FAQ</button>
+                <button class="btn btn-dash btn-primary font-semibold text-xl"><i
+                        class="fa-solid fa-book-open"></i>Learn</button>
+                <button class="btn btn-dash btn-primary font-semibold text-xl"><i
+                        class="fa-solid fa-right-from-bracket"></i>Logout</button>
             </div>
         </nav>
     </header>
+
+    <main>
+        <!-- hero section -->
+        <section class=" w-11/12 mx-auto flex justify-between items-center py-24">
+            <div class="flex flex-col gap-4">
+                <h2 class="text-4xl font-bold"><span class="text-blue-400">English</span> is Easy!!</h2>
+                <p class="max-w-screen-sm text-xl text-gray-600">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি
+                    নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ
+                </p>
+
+
+                <input class="max-w-sm h-14 pl-5 rounded border-[#18181B20]" type="text" placeholder="Enter Your Name"
+                    name="" id="">
+                <input class="max-w-sm h-14 pl-5 rounded border-[#18181B20]" type="password"
+                    placeholder="Enter Login Code 123456" name="" id="password">
+                <button class="btn btn-active btn-primary w-fit">Get started</button>
+            </div>
+            <div>
+                <img src="assets/hero-student.png" alt="">
+            </div>
+        </section>
+
+        <!-- frequently ask question section -->
+        <section class="w-11/12 mx-auto py-20">
+            <h2 class="text-4xl font-bold text-center mb-16"><span class="text-blue-400">Frequently</span> Asked Questions
+            </h2>
+            <div class="flex flex-col gap-5">
+                <div class="collapse collapse-plus bg-base-100 border border-base-300">
+                    <input type="radio" name="my-accordion-3" checked="checked" />
+                    <div class="collapse-title font-semibold">1. How can I start learning English on this website?</div>
+                    <div class="collapse-content text-sm">Think about how you learn best and choose resources that cater to your preferred learning style. </div>
+                </div>
+                <div class="collapse collapse-plus bg-base-100 border border-base-300">
+                    <input type="radio" name="my-accordion-3" />
+                    <div class="collapse-title font-semibold">2. Is this website free to use?</div>
+                    <div class="collapse-content text-sm">Yes . It's free for everyone.</div>
+                </div>
+                <div class="collapse collapse-plus bg-base-100 border border-base-300">
+                    <input type="radio" name="my-accordion-3" />
+                    <div class="collapse-title font-semibold">3. Do I need to create an account?</div>
+                    <div class="collapse-content text-sm">Yes</div>
+                </div>
+                <div class="collapse collapse-plus bg-base-100 border border-base-300">
+                    <input type="radio" name="my-accordion-3" />
+                    <div class="collapse-title font-semibold">4. How can I build my English vocabulary?</div>
+                    <div class="collapse-content text-sm">To build your English vocabulary, engage in regular reading, learn new words in context, use flashcards or a vocabulary journal, and practice using those words in speaking and writing. </div>
+                </div>
+                <div class="collapse collapse-plus bg-base-100 border border-base-300">
+                    <input type="radio" name="my-accordion-3" />
+                    <div class="collapse-title font-semibold">5. Do you offer certificates for completed courses?</div>
+                    <div class="collapse-content text-sm">Yes, certificates are issued to those who complete the course.</div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
+
 </html>

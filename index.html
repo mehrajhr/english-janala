@@ -78,11 +78,18 @@
                 <h2 class="text-2xl font-semibold">একটি Lesson Select করুন।</h2>
             </div>
 
+            <!-- loading -->
+             <section id="loading" class="w-11/12 mx-auto flex justify-center items-center">
+                <span class="loading loading-dots loading-xl text-4xl"></span>
+             </section>
+
+            <!-- no vocabulary alert -->
             <div id="noVocabularyAlert" class="flex flex-col gap-4 justify-center items-center">
                 <i class="fa-solid fa-triangle-exclamation text-8xl text-gray-500"></i>
                 <p class="text-sm text-gray-600">এই Lesson এ এখনো কোন Vocabulary যুক্ত করা হয়নি।</p>
                 <h2 class="text-2xl font-semibold">নেক্সট Lesson এ যান</h2>
             </div>
+
             <!-- Vocabulary loaded card container -->
             <div id="displayVocabularyCardContainer" class="grid grid-cols-3 gap-5">
             </div>

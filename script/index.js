@@ -27,6 +27,7 @@ loadLessonBtn();
 // load Vocabulary Section card
 
 const loadVocabulary = (id) => {
+  displayLoading();
   const url = `https://openapi.programming-hero.com/api/level/${id}`;
   fetch(url)
     .then((response) => response.json())
@@ -127,16 +128,25 @@ function displayInitial(){
     document.getElementById("noVocabularyAlert").classList.add("hidden");
     document.getElementById("displayVocabularyCardContainer").classList.add("hidden");
     document.getElementById("initial").classList.remove("hidden");
+    document.getElementById("loading").classList.add("hidden");
 }
 function displayNoVocabularyAlert(){
     document.getElementById("noVocabularyAlert").classList.remove("hidden");
     document.getElementById("displayVocabularyCardContainer").classList.add("hidden");
     document.getElementById("initial").classList.add("hidden");
+    document.getElementById("loading").classList.add("hidden");
 }
 function displayCard(){
     document.getElementById("noVocabularyAlert").classList.add("hidden");
     document.getElementById("displayVocabularyCardContainer").classList.remove("hidden");
     document.getElementById("initial").classList.add("hidden");
+    document.getElementById("loading").classList.add("hidden");
+}
+function displayLoading(){
+    document.getElementById("noVocabularyAlert").classList.add("hidden");
+    document.getElementById("displayVocabularyCardContainer").classList.add("hidden");
+    document.getElementById("initial").classList.add("hidden");
+    document.getElementById("loading").classList.remove("hidden");
 }
 displayInitial();
 
@@ -163,11 +173,11 @@ document.getElementById("login").addEventListener('click', () =>{
             displayAfterLogin();
         }
         else{
-            alert("enter valid password");
+            alert("Enter valid password");
         }
     }
     else{
-        alert("enter your name");
+        alert("Enter your name");
     }
 })
 document.getElementById("logout").addEventListener('click', () =>{

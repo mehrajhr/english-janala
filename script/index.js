@@ -63,7 +63,7 @@ const displayVocabularyCard = (vocabularies) => {
                         </div>
                         <div class="flex justify-between px-10">
                             <i class="fa-solid fa-circle-info text-2xl hover:cursor-pointer" onclick=" loadDetails(${vocabulary.id})"></i>
-                            <i class="fa-solid fa-volume-high text-2xl hover:cursor-pointer" onclick=""></i>
+                            <i class="fa-solid fa-volume-high text-2xl hover:cursor-pointer" onclick="pronounceWord('${vocabulary.word}')"></i>
                         </div>
              </div>
             `;
@@ -72,6 +72,12 @@ const displayVocabularyCard = (vocabularies) => {
       });
   }
 };
+
+function pronounceWord(word) {
+    const utterance = new SpeechSynthesisUtterance(word);
+    utterance.lang = 'en-EN'; // English
+    window.speechSynthesis.speak(utterance);
+}
 // {
 //     "word": "Benevolent",
 //     "meaning": "দয়ালু",

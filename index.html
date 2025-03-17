@@ -11,11 +11,16 @@
 
     <!-- font awesome  -->
     <script src="https://kit.fontawesome.com/20ed8860d8.js" crossorigin="anonymous"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 
 <body>
-    <header class="py-5 border-b-2 border-[#C6BDBD] bg-slate-50">
-        <nav class="w-11/12 mx-auto flex justify-between items-center">
+    <header id="navbar" class="py-5 border-b-2 border-[#C6BDBD] bg-slate-50 fixed top-0 left-0 w-full">
+        <nav id="navbar" class="w-11/12 mx-auto flex justify-between items-center">
             <div class="flex gap-2 items-center">
                 <h2 class="text-3xl font-bold">English</h2>
                 <img class="w-16" src="assets/logo.png" alt="">
@@ -23,11 +28,11 @@
             </div>
 
             <div class="flex gap-3">
-                <button class="btn btn-dash btn-primary font-semibold text-xl"><i
-                        class="fa-solid fa-circle-question"></i>FAQ</button>
-                <button class="btn btn-dash btn-primary font-semibold text-xl"><i
-                        class="fa-solid fa-book-open"></i>Learn</button>
-                <button class="btn btn-dash btn-primary font-semibold text-xl"><i
+                <a href="#faqSection"><button class="btn btn-dash btn-primary font-semibold text-xl"><i
+                            class="fa-solid fa-circle-question"></i>FAQ</button></a>
+                <a href="#vucabularysection"><button class="btn btn-dash btn-primary font-semibold text-xl"><i
+                            class="fa-solid fa-book-open"></i>Learn</button></a>
+                <button id="logout" class="btn btn-dash btn-primary font-semibold text-xl"><i
                         class="fa-solid fa-right-from-bracket"></i>Logout</button>
             </div>
         </nav>
@@ -35,7 +40,7 @@
 
     <main>
         <!-- hero section -->
-        <section class=" w-11/12 mx-auto flex justify-between items-center py-24">
+        <section id="banner" class=" w-11/12 mx-auto flex justify-between items-center py-24">
             <div class="flex flex-col gap-4">
                 <h2 class="text-4xl font-bold"><span class="text-blue-400">English</span> is Easy!!</h2>
                 <p class="max-w-screen-sm text-xl text-gray-600">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি
@@ -44,19 +49,19 @@
 
 
                 <input class="max-w-sm h-14 pl-5 rounded border-[#18181B20]" type="text" placeholder="Enter Your Name"
-                    name="" id="">
+                    name="" id="name">
                 <input class="max-w-sm h-14 pl-5 rounded border-[#18181B20]" type="password"
                     placeholder="Enter Login Code 123456" name="" id="password">
-                <button class="btn btn-active btn-primary w-fit">Get started</button>
+                <button id="login" class="btn btn-active btn-primary w-fit">Get started</button>
             </div>
             <div>
                 <img src="assets/hero-student.png" alt="">
             </div>
         </section>
 
-        <!-- Let's Learn Vocabularies section -->
+        <!-- Let's Learn Vocabularies btn-->
 
-        <section class="w-11/12 mx-auto py-20">
+        <section id="vocabulariesBtns" class="w-11/12 mx-auto py-40">
             <h2 class="text-4xl py-5 text-center font-bold"><span class="text-blue-500">Let's </span>Learn Vocabularies
             </h2>
             <div id="lesson-btn-container" class="flex gap-5 justify-center py-5">
@@ -65,7 +70,7 @@
         </section>
 
         <!-- Vocabulary Section -->
-        <section class="w-11/12 mx-auto bg-[#F8F8F8] py-10 px-5 rounded-xl">
+        <section id="vucabularysection" class="w-11/12 mx-auto bg-[#F8F8F8] py-10 px-5 rounded-xl">
 
             <!-- initial -->
             <div id="initial" class="flex flex-col gap-4 justify-center items-center">
@@ -83,7 +88,7 @@
             </div>
         </section>
         <!-- frequently ask question section -->
-        <section class="w-11/12 mx-auto py-20">
+        <section id="faqSection" class="w-11/12 mx-auto py-20">
             <h2 class="text-4xl font-bold text-center mb-16"><span class="text-blue-400">Frequently</span> Asked
                 Questions
             </h2>
@@ -145,29 +150,6 @@
     <!-- Open the modal using ID.showModal() method -->
     <!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
     <dialog id="vocabularyDetails" class="modal">
-        <div class="modal-box">
-            <h3 class="text-2xl font-bold">Eager ( <i class="fa-solid fa-microphone"></i> : ইগার)</h3>
-            <div class="py-5 flex flex-col gap-2">
-                <p >Meaning</p>
-                <p >আগ্রহী</p>
-            </div>
-            <div class="py-5 flex flex-col gap-2">
-                <p >Example</p>
-                <p >The kids were eager to open their gifts.</p>
-            </div>
-            <div class="py-5 flex flex-col gap-2">
-                <p >সমার্থক শব্দ গুলো</p>
-                <div id="synonymContainer" class="flex flex-row gap-2">
-
-                </div>
-            </div>
-            <div class="modal-action justify-start">
-                <form method="dialog">
-                    <!-- if there is a button in form, it will close the modal -->
-                    <button class="btn btn-active btn-primary">Complete Learning</button>
-                </form>
-            </div>
-        </div>
     </dialog>
     <script src="script/index.js"></script>
 </body>

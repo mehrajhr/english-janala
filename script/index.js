@@ -139,3 +139,37 @@ function displayCard(){
     document.getElementById("initial").classList.add("hidden");
 }
 displayInitial();
+
+function displayBeforeLogin(){
+    document.getElementById("navbar").classList.add("hidden");
+    document.getElementById("vocabulariesBtns").classList.add("hidden");
+    document.getElementById("vucabularysection").classList.add("hidden");
+    document.getElementById("faqSection").classList.add("hidden");
+    document.getElementById("banner").classList.remove("hidden");
+}
+function displayAfterLogin(){
+    document.getElementById("navbar").classList.remove("hidden");
+    document.getElementById("vocabulariesBtns").classList.remove("hidden");
+    document.getElementById("vucabularysection").classList.remove("hidden");
+    document.getElementById("faqSection").classList.remove("hidden");
+    document.getElementById("banner").classList.add("hidden");
+}
+displayBeforeLogin();
+document.getElementById("login").addEventListener('click', () =>{
+    const name = document.getElementById("name").value;
+    const password = document.getElementById("password").value;
+    if(name){
+        if(password === "123456"){
+            displayAfterLogin();
+        }
+        else{
+            alert("enter valid password");
+        }
+    }
+    else{
+        alert("enter your name");
+    }
+})
+document.getElementById("logout").addEventListener('click', () =>{
+    displayBeforeLogin();
+})

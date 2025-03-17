@@ -11,7 +11,7 @@ const displayLessonBtn = (array) => {
     console.log(levelNo);
     const div = document.createElement("div");
     div.innerHTML = `
-        <button  onclick="loadVocabulary(${levelNo})" class="btn btn-outline btn-primary"><i class="fa-solid fa-book-open"></i>Lesson -${levelNo}</button>
+        <button id="btn_${levelNo}"  onclick="loadVocabulary(${levelNo})" class="btn btn-outline btn-primary"><i class="fa-solid fa-book-open"></i>Lesson -${levelNo}</button>
         `;
     lessonButtonContainer.appendChild(div);
   });
@@ -25,8 +25,16 @@ loadLessonBtn();
 // :
 // {id: 2, level: 6, word: 'Benevolent', meaning: 'দয়ালু', pronunciation: 'বেনেভোলেন্ট'}
 // load Vocabulary Section card
-
+const removeClass = () =>{
+    const btns = document.getElementsByClassName("active");
+    for(let btn of btns){
+        btn.classList.remove("active");
+    }
+}
 const loadVocabulary = (id) => {
+    const btn = document.getElementById(`btn_${id}`);
+    removeClass();
+    btn.classList.add("active");
   displayLoading();
   const url = `https://openapi.programming-hero.com/api/level/${id}`;
   fetch(url)
@@ -95,15 +103,15 @@ const displayDetails = (data) =>{
     <div class="modal-box">
             <h3 class="text-2xl font-bold">${data.word} ( <i class="fa-solid fa-microphone"></i> : ${data.pronunciation})</h3>
             <div class="py-5 flex flex-col gap-2">
-                <p >Meaning</p>
+                <p class="font-semibold text-2xl">Meaning</p>
                 <p >${data.meaning === null? "অর্থ পাওয়া যায়নি" : data.meaning}</p>
             </div>
             <div class="py-5 flex flex-col gap-2">
-                <p >Example</p>
+                <p class="font-semibold text-2xl">Example</p>
                 <p >${data.sentence}</p>
             </div>
             <div class="py-5 flex flex-col gap-2">
-                <p >সমার্থক শব্দ গুলো</p>
+                <p class="font-semibold text-2xl">সমার্থক শব্দ গুলো</p>
                 <div id="synonymContainer" class="flex flex-row gap-2">
 
                 </div>
@@ -170,6 +178,7 @@ document.getElementById("login").addEventListener('click', () =>{
     const password = document.getElementById("password").value;
     if(name){
         if(password === "123456"){
+            document.getElementById("login-modal").showModal();
             displayAfterLogin();
         }
         else{

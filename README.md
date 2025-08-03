@@ -26,3 +26,5 @@ Tailwind CSS — Utility-first styling
 
 DaisyUI — Beautiful, pre-built components
 
+🔥Live site : https://statuesque-tanuki-4d2bf8.netlify.app/#vocabulariesBtns
+
